@@ -18,7 +18,7 @@ public class BaseCommandTest {
             return "";
         }
     }
-
+    @Test
     public void throwsWhenWrongNumberOfArgs() throws CommandException {
         assertThrows(CommandException.class, () -> {
             new TestCommand().execute(new String[]{"cmd", "extra"});
