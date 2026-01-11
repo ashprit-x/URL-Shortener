@@ -1,6 +1,10 @@
 package org.example;
 
 import org.example.commands.*;
+import org.example.commands.impl.GetCommand;
+import org.example.commands.impl.HelpCommand;
+import org.example.commands.impl.ListCommand;
+import org.example.commands.impl.ShortenCommand;
 import org.example.repository.InMemoryURLRepository;
 import org.example.service.URLShortenerService;
 
@@ -34,7 +38,7 @@ public class CLIURLShortener {
                 String[] input = line.split("\\s+");
 
                 try {
-                    commandExecutor.execute(input);
+                    System.out.println(commandExecutor.execute(input));
                 } catch (CommandException e) {
                     System.out.println(e.getMessage());
                 }

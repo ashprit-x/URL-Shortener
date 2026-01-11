@@ -1,5 +1,7 @@
-package org.example.commands;
+package org.example.commands.impl;
 
+import org.example.commands.BaseCommand;
+import org.example.commands.CommandException;
 import org.example.service.URLShortenerInterface;
 
 public class ShortenCommand extends BaseCommand {
@@ -11,9 +13,9 @@ public class ShortenCommand extends BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) throws CommandException {
+    public String execute(String[] args) throws CommandException {
         requireArgs(args, 2);
-        System.out.println(shortenerService.shorten(args[1]));
+        return shortenerService.shorten(args[1]);
     }
 
     @Override

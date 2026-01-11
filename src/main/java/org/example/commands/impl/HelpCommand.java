@@ -1,4 +1,9 @@
-package org.example.commands;
+package org.example.commands.impl;
+
+import org.example.commands.BaseCommand;
+import org.example.commands.Command;
+import org.example.commands.CommandException;
+import org.example.utils.URLFormatter;
 
 import java.util.Map;
 
@@ -11,11 +16,9 @@ public class HelpCommand extends BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) throws CommandException {
+    public String execute(String[] args) throws CommandException {
         requireArgs(args, 1);
-        commands.forEach((name, cmd) ->
-                System.out.println(name + " -> " + cmd.help())
-        );
+        return URLFormatter.formatCommands(commands);
     }
 
     @Override

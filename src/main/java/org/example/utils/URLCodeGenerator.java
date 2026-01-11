@@ -11,9 +11,10 @@ public class URLCodeGenerator {
 
     public String generateUrlEnding() {
         StringBuilder stringBuilder = new StringBuilder();
-        while (counter > 0) {
-            stringBuilder.append(baseCharacters.charAt((int) (counter % base)));
-            counter /= base;
+        long temp = counter;
+        while (temp > 0) {
+            stringBuilder.append(baseCharacters.charAt((int) (temp % base)));
+            temp /= base;
         }
         counter++;
         return stringBuilder.toString();

@@ -1,5 +1,7 @@
-package org.example.commands;
+package org.example.commands.impl;
 
+import org.example.commands.BaseCommand;
+import org.example.commands.CommandException;
 import org.example.service.URLShortenerInterface;
 
 import java.util.Optional;
@@ -13,16 +15,16 @@ public class GetCommand extends BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) throws CommandException{
+    public String execute(String[] args) throws CommandException {
         requireArgs(args, 2);
+
         Optional<String> original = shortenerService.getOriginalUrl(args[1]);
 
         if (!original.isPresent()) {
-            System.out.println("Shortened URL could not be found");
-            return;
+            throw new CommandException("Shortened URL could not be found");
         }
 
-        System.out.println(original.get());
+        return original.get();
     }
 
     @Override
