@@ -1,6 +1,8 @@
 package org.example.commands;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BaseCommandTest {
 
@@ -17,9 +19,10 @@ public class BaseCommandTest {
         }
     }
 
-    @Test(expected = CommandException.class)
     public void throwsWhenWrongNumberOfArgs() throws CommandException {
-        new TestCommand().execute(new String[]{"cmd", "extra"});
+        assertThrows(CommandException.class, () -> {
+            new TestCommand().execute(new String[]{"cmd", "extra"});
+        });
     }
 
     @Test

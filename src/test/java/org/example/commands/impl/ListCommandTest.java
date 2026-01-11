@@ -2,9 +2,9 @@ package org.example.commands.impl;
 
 import org.example.repository.InMemoryURLRepository;
 import org.example.service.URLShortenerService;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ListCommandTest {
 
