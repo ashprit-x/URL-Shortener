@@ -7,6 +7,9 @@ import org.example.utils.URLFormatter;
 
 import java.util.Map;
 
+/**
+ * Lists all the commands available and how they work
+ */
 public class HelpCommand extends BaseCommand {
 
     private final Map<String, Command> commands;

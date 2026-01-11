@@ -4,6 +4,9 @@ import org.example.commands.BaseCommand;
 import org.example.commands.CommandException;
 import org.example.service.URLShortenerInterface;
 
+/**
+ * Shortens a URL and returns the code
+ */
 public class ShortenCommand extends BaseCommand {
 
     private final URLShortenerInterface shortenerService;

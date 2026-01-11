@@ -5,6 +5,9 @@ import org.example.commands.CommandException;
 import org.example.service.URLShortenerInterface;
 import org.example.utils.URLFormatter;
 
+/**
+ * Lists all the URL to shortened URL code pairs
+ */
 public class ListCommand extends BaseCommand {
 
     private final URLShortenerInterface shortenerService;
@@ -21,6 +24,6 @@ public class ListCommand extends BaseCommand {
 
     @Override
     public String help() {
-        return "list : lists all the url to shortened url pairs";
+        return "list : lists all the url to shortened url code pairs";
     }
 }

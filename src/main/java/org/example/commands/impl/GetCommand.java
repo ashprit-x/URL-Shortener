@@ -6,6 +6,9 @@ import org.example.service.URLShortenerInterface;
 
 import java.util.Optional;
 
+/**
+ * Gets the original URL from the code given.
+ */
 public class GetCommand extends BaseCommand {
 
     private final URLShortenerInterface shortenerService;

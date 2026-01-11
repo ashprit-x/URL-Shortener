@@ -12,6 +12,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * A URL Shortener that works on the CLI.
+ */
 public class CLIURLShortener {
 
     @SuppressWarnings("InfiniteLoopStatement")

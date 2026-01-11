@@ -1,5 +1,8 @@
 package org.example.utils;
 
+/**
+ * Generates the code for a shortened URL.
+ */
 public class URLCodeGenerator {
     private static final int base = 62;
     private static final String baseCharacters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
